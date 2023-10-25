@@ -14,7 +14,9 @@ def readFile():
 
 def appendFile(lines):
     with open('doc.txt', 'a') as file:
-        file.write("\n".join(lines))
+        for line in lines:
+            file.write(line)
+            file.write("\r\n")
 
 def readDoc():
     titles = readFile()
