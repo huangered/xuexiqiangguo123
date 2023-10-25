@@ -3,5 +3,6 @@
 2. 要装python 3
 3. 修改    option.add_argument('--user-data-dir=C:\\Users\\pethua01\\AppData\\Local\\Google\\Chrome\\User Data')
  把 pethua01 改成自己的 ldap名
+4. 自己先登陆下https://www.xuexi.cn
 
 运行 go.bat
