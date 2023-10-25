@@ -21,7 +21,7 @@ def readDoc():
 
     driver.maximize_window()
 
-    print("Maximize window")
+    print("max")
 
     time.sleep(5)
 
