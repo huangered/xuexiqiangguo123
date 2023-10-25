@@ -69,7 +69,7 @@ def readDoc():
             if voice != None:
                 print("voice\r\n")
                 voice.click()
-            #time.sleep(70)
+            time.sleep(70)
         except NoSuchElementException:
             print("Do nothing")
         
