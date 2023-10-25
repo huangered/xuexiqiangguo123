@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
 import time
+import platform
 
 def readFile():
     with open('doc.txt', 'r') as file:
@@ -21,7 +22,10 @@ def appendFile(lines):
 def readDoc():
     titles = readFile()
     option = webdriver.ChromeOptions()
-    option.add_argument('--user-data-dir=C:\\Users\\pethua01\\AppData\\Local\\Google\\Chrome\\User Data')
+    if platform.system() == "Windows":
+        option.add_argument('--user-data-dir=C:\\Users\\pethua01\\AppData\\Local\\Google\\Chrome\\User Data')
+    if platform.system() == "Darwin":
+        option.add_argument('--user-data-dir=C:\\Users\\pethua01\\AppData\\Local\\Google\\Chrome\\User Data')
     option.add_argument("--no-sandbox")
     option.add_argument("--disable-dev-shm-usage")
     option.add_argument('--disable-gpu')
