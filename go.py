@@ -8,7 +8,7 @@ import requests
 import json
 
 def readFile():
-    with open('doc.txt', 'r') as file:
+    with open('doc.txt', 'r', encoding='utf-8') as file:
         lines = []
         for line in file:
             line = line.strip()
@@ -16,7 +16,7 @@ def readFile():
         return lines
 
 def appendFile(lines):
-    with open('doc.txt', 'a') as file:
+    with open('doc.txt', 'a', encoding='utf-8') as file:
         for line in lines:
             file.write(line)
             file.write("\r\n")
@@ -92,7 +92,7 @@ def readByApi():
         if item['title'] not in titles:
             new_titles.append(item['title'])
             urls.append(item['url'])
-    appendFile(titles[])
+    appendFile(new_titles)
     # open chrome
     option = webdriver.ChromeOptions()
     if platform.system() == "Windows":
