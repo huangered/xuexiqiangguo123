@@ -26,6 +26,7 @@ def readDoc():
     option = webdriver.ChromeOptions()
     if platform.system() == "Windows":
         option.add_argument('--user-data-dir=C:\\Users\\pethua01\\AppData\\Local\\Google\\Chrome\\User Data')
+        option.add_argument('--profile-directory=Default')
     if platform.system() == "Darwin":
         option.add_argument('--user-data-dir=C:\\Users\\pethua01\\AppData\\Local\\Google\\Chrome\\User Data')
     option.add_argument("--no-sandbox")
