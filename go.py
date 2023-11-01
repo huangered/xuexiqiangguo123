@@ -88,11 +88,16 @@ def readByApi():
     new_titles = []
     r = requests.get('https://www.xuexi.cn/lgdata/1crqb964p71.json')
     print(r.status_code)
+    i = 0;
     for item in r.json():
         print("{} {} {}".format(item['title'], item['publishTime'], item['url']))
         if item['title'] not in titles:
+            i++
             new_titles.append(item['title'])
             urls.append(item['url'])
+        if i == 10:
+            break
+
     appendFile(new_titles)
     # open chrome
     option = webdriver.ChromeOptions()
