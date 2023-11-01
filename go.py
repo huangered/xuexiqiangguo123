@@ -92,7 +92,7 @@ def readByApi():
     for item in r.json():
         print("{} {} {}".format(item['title'], item['publishTime'], item['url']))
         if item['title'] not in titles:
-            i++
+            i = i+ 1
             new_titles.append(item['title'])
             urls.append(item['url'])
         if i == 10:
